@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700;900&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    -webkit-overflow-scrolling: touch;
+    font-family: 'Mulish', sans-serif;
+  
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  .popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba( #000000, .5);
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      .share-popup {
+          position: relative;
+          width: 808px;
+          padding: 78px;
+          background-color: #fff;
+          border-radius: 15px;
+          .popup-close {
+              width: 39px;
+              height: 39px;
+              border-radius: 50%;
+              background: #fcfcfc;
+              position: absolute;
+              top: 25px;
+              right: 25px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              transition: 300ms background-color;
+
+              img {
+                  height: 15px;
+              }
+              &:hover {
+                  background: darken($color: #fcfcfc, $amount: 3);
+              }
+          }
+          h4 {
+              font-size: 22px;
+              font-weight: bold;
+              color: #242e4c;
+              margin-bottom: 40px;
+          }
+          ul {
+              display: flex;
+              margin-bottom: 40px;
+              li {
+                  flex: 1;
+                  text-align: center;
+
+                  a{
+                      display: inline-flex;
+                      align-items: center;
+                      justify-content: center;
+                      width: 82px;
+                      height: 82px;
+                      border-radius: 50%;
+                      border: 1px solid #ebebf2;
+                      transition: 300ms bordr;
+                      &:hover {
+                          border-color: #f775c1;
+                      }
+
+                      img {
+                          height: 35px;
+                         
+                      }
+                  }
+              }
+
+          }
+          h6 {
+              font-size: 16px;
+              color: #242E4C;
+              line-height: 21px;
+              font-weight: bold;
+          }
+          .input {
+              position: relative;
+
+            button {
+              position: absolute;
+              top: 0;
+              right: 0;
+              height: 57px;
+              padding: 0 20px;
+              margin: 10px 0;
+              line-height: 57px;
+              font-size: 14px;
+              font-weight: bold;
+              color: #f775c1;
+              background: transparent;
+              cursor: pointer;
+            }
+          
+
+          input {
+              width: 100%;
+              height: 57px;
+              margin-top: 10px;
+              border: 1px solid #EBEBF2;
+              padding: 0 15px;
+              font-size: 16px;
+              color: #242E4C;
+          }
+        }
+      }
+
+  }
+
+  .popup-toggle {
+      display: none;
+
+      &:checked + .popup {
+          opacity: 1;
+          visibility: visible;
+      }
+  }
+
+  .alert {
+      position: fixed;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50% , 0);
+      padding: 5px 25px;
+      border-radius: 20px;
+      font-size: 14px;
+      background-color: #1b1b30;
+      color: #fff;
+      visibility: hidden;
+      transition: 300ms all;
+      &.success {
+        background-color: #F775C1;
+      }
+      &.error {
+        background-color: #a02525;
+      }
+      &.active {
+        transform: translate(-50%, -20px);
+        opacity: 1;
+        visibility: visible;
+        z-index: 1000;
+    }
+  }

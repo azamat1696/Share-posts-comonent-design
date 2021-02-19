@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Share Posts</title>
+  </head>
+  <body>
+      <label for="popup-1">share</label>
+
+    <input type="checkbox" id="popup-1" class="popup-toggle">
+    <div class="popup">
+      <div class="popup-inner share-popup">
+          <label for="popup-1"  class="popup-close">
+              <img src="img/close.svg">
+          </label>
+        <h4>Share this design</h4>
+        <ul>
+          <li><a href="#">
+              <img src="img/facebook.svg">
+          </a></li>
+          <li><a href="#">
+              <img src="img/instagram.svg">
+          </a></li>
+          <li><a href="#">
+              <img src="img/linkedin.svg">
+          </a></li>
+          <li><a href="#">
+              <img src="img/pinterest.svg">
+          </a></li>
+          <li><a href="#">
+              <img src="img/twitter.svg">
+          </a></li>
+          <li><a href="#">
+              <img src="img/tumblr.svg">
+          </a></li>
+        </ul>
+        <h6>or Copy link</h6>
+        <div class="input">
+        <input
+        id="input-url"
+          type="text"
+          value="https://www.uidesigndaily.com/posts/5d6ab9ea91deae0012006d44"
+        />
+        <button type="button" readonly onclick="Copy('input-url')">Copy</button>
+    </div>
+      </div>
+    </div>
+
+    <div class="alert">
+        Successfully copied.
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
